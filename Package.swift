@@ -15,7 +15,12 @@ let package = Package(
     targets: [
         .target(
             name: "SwiftYouTubePlayer",
-            dependencies: []
+            dependencies: [],
+            path: "YouTubePlayer/YouTubePlayer",
+            exclude: ["Info.plist"],
+            resources: [
+                .process("YTPlayer.html")
+            ]
         )
     ]
 )
